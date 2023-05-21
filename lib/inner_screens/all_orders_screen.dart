@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:grocery_admin_panel/widgets/orders_list.dart';
 import 'package:provider/provider.dart';
@@ -35,7 +36,7 @@ class _AllOrdersScreenState extends State<AllOrdersScreen> {
                 child: SideMenu(),
               ),
             Expanded(
-                // It takes 5/6 part of the screen
+              // It takes 5/6 part of the screen
                 flex: 5,
                 child: SingleChildScrollView(
                   controller: ScrollController(),
@@ -44,7 +45,7 @@ class _AllOrdersScreenState extends State<AllOrdersScreen> {
                       const SizedBox(
                         height: 25,
                       ),
-                      Header(
+                      Header(showTexField: false,
                         fct: () {
                           context.read<menucontroller>().controlAllOrder();
                         },
@@ -55,7 +56,9 @@ class _AllOrdersScreenState extends State<AllOrdersScreen> {
                       ),
                       const Padding(
                         padding: EdgeInsets.all(8.0),
-                        child: OrdersList(),
+                        child: OrdersList(
+                          isInDashboard: false,
+                        ),
                       ),
                     ],
                   ),

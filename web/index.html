@@ -55,5 +55,22 @@
       });
     });
   </script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script defer src="./init-firebase.js"></script>
+<script>
+  const firebaseConfig = {
+  apiKey: "AIzaSyBU6P2LnugStON0joRkcmJsSiIqVuDayAU",
+  authDomain: "eatsmart-60280.firebaseapp.com",
+  projectId: "eatsmart-60280",
+  storageBucket: "eatsmart-60280.appspot.com",
+  messagingSenderId: "310957792050",
+  appId: "1:310957792050:web:9abc6f444e24f667df952b",
+  measurementId: "G-3TQKVGLS43"
+};
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+</script>
 </body>
 </html>
